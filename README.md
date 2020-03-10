@@ -101,7 +101,7 @@ class ProductRepository
     /**
      * Find published products by SKU
      * 
-     * @param  {int} $sku
+     * @param {int} $sku
      * 
      * @return {Product}
      */

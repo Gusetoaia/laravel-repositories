@@ -67,11 +67,8 @@ class MakeRepositoryCommand extends GeneratorCommand
         }
 
         $this->makeDirectory($path);
-
         $this->files->put($path, $this->buildClass($this->class));
-
         $this->info($this->type.' created successfully.');
-
         $this->line("<info>Created Repository :</info> $this->class");
 
         return null;
@@ -82,8 +79,7 @@ class MakeRepositoryCommand extends GeneratorCommand
      */
     private function setRepositoryClass(): MakeRepositoryCommand
     {
-        $this->class = ucfirst($this->argument('class'));
-
+        $this->class = ucfirst($this->argument('class'))
         $this->modelNamespace = $this->option('model');
 
         $arrModelNamespace = explode('\\', $this->modelNamespace);
