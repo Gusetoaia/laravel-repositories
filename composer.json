@@ -1,0 +1,29 @@
+{
+  "version": "1.0.0",
+  "name": "Gusetoaia/laravel-repositories",
+  "description": "Laravel repositories using the native Eloquent functions",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Gusetoaia Iulian",
+      "email": "gusetoaia_iulian@yahoo.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "autoload": {
+    "psr-4": {
+      "Gusetoaia\\": "src"
+    }
+  },
+  "require": {
+    "illuminate/console": "^6.13"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Gusetoaia\\RepositoryServiceProvider"
+      ]
+    }
+  }
+}
