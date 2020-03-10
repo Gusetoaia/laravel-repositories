@@ -10,7 +10,7 @@
       "email": "gusetoaia_iulian@yahoo.com"
     }
   ],
-  "minimum-stability": "dev",
+  "minimum-stability": "stable",
   "autoload": {
     "psr-4": {
       "Gusetoaia\\": "src"
