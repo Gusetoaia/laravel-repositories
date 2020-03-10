@@ -18,7 +18,7 @@ class MakeRepositoryCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $signature = 'make:repository {class : Your repository class name.} {--M|model='.self::MODEL_DEFAULT.' : The model that will be use on your repository, write the full namespace.}';
+    protected $signature = 'make:repository {class : Your repository class name.} {--M|model=' . self::MODEL_DEFAULT . ' : The model that will be use on your repository, write the full namespace.}';
 
     /**
      * The console command description.
@@ -61,14 +61,14 @@ class MakeRepositoryCommand extends GeneratorCommand
         $path = $this->getPath($this->qualifyClass($this->class));
 
         if ($this->alreadyExists($this->class)) {
-            $this->error($this->type.' already exists!');
+            $this->error($this->type . ' already exists!');
 
             return false;
         }
 
         $this->makeDirectory($path);
         $this->files->put($path, $this->buildClass($this->class));
-        $this->info($this->type.' created successfully.');
+        $this->info($this->type . ' created successfully.');
         $this->line("<info>Created Repository :</info> $this->class");
 
         return null;
@@ -83,7 +83,7 @@ class MakeRepositoryCommand extends GeneratorCommand
         $this->modelNamespace = $this->option('model');
 
         $arrModelNamespace = explode('\\', $this->modelNamespace);
-        $this->model = $arrModelNamespace[count($arrModelNamespace) -1];
+        $this->model = $arrModelNamespace[count($arrModelNamespace) - 1];
 
         return $this;
     }
@@ -91,8 +91,8 @@ class MakeRepositoryCommand extends GeneratorCommand
     /**
      * Replace the class name for the given stub.
      *
-     * @param  string  $stub
-     * @param  string  $name
+     * @param string $stub
+     * @param string $name
      * @return string
      */
     protected function replaceClass($stub, $name): string
@@ -129,7 +129,7 @@ class MakeRepositoryCommand extends GeneratorCommand
     /**
      * Get the default namespace for the class.
      *
-     * @param  string  $rootNamespace
+     * @param string $rootNamespace
      * @return string
      */
     protected function getDefaultNamespace($rootNamespace): string
