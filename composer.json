@@ -13,7 +13,7 @@
   "minimum-stability": "stable",
   "autoload": {
     "psr-4": {
-      "Gusetoaia\\laravel-repositories\\": "src"
+      "Gusetoaia\\LaravelRepositories\\": "src"
     }
   },
   "require": {
@@ -21,7 +21,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Gusetoaia\\laravel-repositories\\RepositoryServiceProvider"
+        "Gusetoaia\\LaravelRepositories\\RepositoryServiceProvider"
       ]
     }
   }
