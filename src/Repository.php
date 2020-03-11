@@ -1,6 +1,6 @@
 <?php
 
-namespace Gusetoaia;
+namespace Gusetoaia\LaravelRepositories;
 
 trait Repository
 {
