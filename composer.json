@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.3",
   "name": "gusetoaia/laravel-repositories",
   "description": "Laravel repositories using the native Eloquent functions!",
   "type": "library",
@@ -17,7 +17,7 @@
     }
   },
   "require": {
-    "illuminate/console": "^6.13"
+    "illuminate/console": "^6.18"
   },
   "extra": {
     "laravel": {
