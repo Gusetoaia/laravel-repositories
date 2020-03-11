@@ -1,6 +1,6 @@
 <?php
 
-namespace Gusetoaia\Commands;
+namespace Gusetoaia\LaravelRepositories\Commands;
 
 use Illuminate\Console\GeneratorCommand;
 use Symfony\Component\Console\Input\InputArgument;
