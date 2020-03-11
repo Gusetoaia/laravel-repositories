@@ -79,7 +79,7 @@ class MakeRepositoryCommand extends GeneratorCommand
      */
     private function setRepositoryClass(): MakeRepositoryCommand
     {
-        $this->class = ucfirst($this->argument('class'))
+        $this->class = ucfirst($this->argument('class'));
         $this->modelNamespace = $this->option('model');
 
         $arrModelNamespace = explode('\\', $this->modelNamespace);
