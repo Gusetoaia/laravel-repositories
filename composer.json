@@ -1,5 +1,5 @@
 {
-  "version": "1.0.5",
+  "version": "1.0.6",
   "name": "gusetoaia/laravel-repositories",
   "description": "Laravel repositories using the native Eloquent functions!",
   "type": "library",
@@ -13,7 +13,7 @@
   "minimum-stability": "stable",
   "autoload": {
     "psr-4": {
-      "Gusetoaia\\": "src"
+      "Gusetoaia\\laravel-repositories\\": "src"
     }
   },
   "require": {
@@ -21,7 +21,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Gusetoaia\\RepositoryServiceProvider"
+        "Gusetoaia\\laravel-repositories\\RepositoryServiceProvider"
       ]
     }
   }
