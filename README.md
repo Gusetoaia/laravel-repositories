@@ -30,8 +30,7 @@ php artisan make:repository ProductRepository --model=App\Product
 
 Don't forget to write the **full namespace** of your model, using '\\\' as the separator.
 
-#### Example:
-
+### Example:
 In this example I assume that you already have a model named Product.
 Used the command 
 
