@@ -53,6 +53,7 @@ class MakeRepositoryCommand extends GeneratorCommand
      * Execute the console command.
      *
      * @return bool|null
+     * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      */
     public function handle(): ?bool
     {
@@ -76,13 +77,15 @@ class MakeRepositoryCommand extends GeneratorCommand
 
     /**
      * Set repository class name and related model
+     *
+     * @return MakeRepositoryCommand
      */
     private function setRepositoryClass(): MakeRepositoryCommand
     {
         $this->class = ucfirst($this->argument('class'));
         $this->modelNamespace = $this->option('model');
 
-        $arrModelNamespace = explode('\\', $this->modelNamespace);
+        $arrModelNamespace = explode('\/', $this->modelNamespace);
         $this->model = $arrModelNamespace[count($arrModelNamespace) - 1];
 
         return $this;

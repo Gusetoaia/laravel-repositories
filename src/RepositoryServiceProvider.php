@@ -7,6 +7,11 @@ use Gusetoaia\LaravelRepositories\Commands\MakeRepositoryCommand;
 
 class RepositoryServiceProvider extends ServiceProvider
 {
+    /**
+     * Repository service
+     *
+     * @return void
+     */
     public function boot()
     {
         if ($this->app->runningInConsole()) {
