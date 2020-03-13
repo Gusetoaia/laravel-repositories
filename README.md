@@ -1,6 +1,10 @@
 # Laravel Eloquent Repositories
 
-## Installation
+1. [Installation](#1-installation)
+2. [Make a repository class](#2-make-a-repository-class)
+3. [Making facade](#3-making-facade)
+
+## 1. Installation
 
 Just install it through Composer:
 
@@ -10,7 +14,7 @@ composer require gusetoaia/laravel-repositories
 
 After installation you can start using the repository pattern with Laravel.
 
-## Make a repository class
+## 2. Make a repository class
 
 This package provide a new Artisan command to create a repository class. All the classes will be generated on the `App\Repositories` folder, if this folder is missing, it will be generated automatically.
 
@@ -21,17 +25,19 @@ php artisan make:repository ProductRepository
 You can use the `--model` option to define the Eloquent model that will be linked to this repository.
 
 ```
-php artisan make:repository ProductRepository --model=App\\Product
+php artisan make:repository ProductRepository --model=App\Product
 ```
 
-Don't forget to write the **full namespace** of your model, using '\\\\' as the separator.
+Don't forget to write the **full namespace** of your model, using '\\\' as the separator.
 
-## Example
+#### Example:
 
 In this example I assume that you already have a model named Product.
 Used the command 
 
-`php artisan make:repository ProductRepository --model=App\\Models\\Product`
+```
+php artisan make:repository ProductRepository --model=App\Models\Product
+```
 
 
 ``` php
@@ -107,8 +113,7 @@ class ProductRepository
      */
     public function findBySku(int $sku): Product 
     {
-        // using 'whereIsPublished' and 'whereSku' scopes
-        // defined on the Product model
+        // using 'whereIsPublished' and 'whereSku', scopes defined on the Product model
         return $this->whereIsPublished(1)
             ->whereSku($sku)
             ->first();
@@ -123,7 +128,6 @@ class ProductRepository
  * In your routes/web.php
  */
 Route::get('/', function (\App\Repositories\ProductRepository $productRepo) {
-
     // Use any Eloquent feature directly
     $productRepo->all()->dd();
 
@@ -132,7 +136,6 @@ Route::get('/', function (\App\Repositories\ProductRepository $productRepo) {
 
     // You can even query relations
     echo $productRepo->first()->category;
-
 });
 ```
 
@@ -140,7 +143,7 @@ I keep the following as a rule of thumb:
 
 - When you're chaining more than 2 Eloquent methods, make a Repository method for it. This goes for all kind of methods, relationships, query scopes etc.
 
-## Making facade
+## 3. Making facade
 
 In our previous example, we used the dependency injection to retrieve our repository. <br>
 If you want to use your repository without it like you are allowed to do it with a model, you need to create a Facade. <br>
@@ -216,7 +219,6 @@ Now, our `routes/web.php` example would be like this :
 use App\Facades\ProductRepository;
 
 Route::get('/', function () {
-
     // Use any Eloquent feature directly
     ProductRepository::all()->dd();
 
@@ -225,6 +227,5 @@ Route::get('/', function () {
 
     // You can even query relations
     echo ProductRepository::first()->category;
-
 });
 ```

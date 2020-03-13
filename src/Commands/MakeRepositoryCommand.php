@@ -85,7 +85,7 @@ class MakeRepositoryCommand extends GeneratorCommand
         $this->class = ucfirst($this->argument('class'));
         $this->modelNamespace = $this->option('model');
 
-        $arrModelNamespace = explode('\/', $this->modelNamespace);
+        $arrModelNamespace = explode('\\', $this->modelNamespace);
         $this->model = $arrModelNamespace[count($arrModelNamespace) - 1];
 
         return $this;
