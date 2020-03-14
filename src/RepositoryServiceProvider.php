@@ -1,9 +1,9 @@
 <?php
 
-namespace Gusetoaia\LaravelRepositories;
+namespace IulianGusetoaia\LaravelRepositories;
 
 use Illuminate\Support\ServiceProvider;
-use Gusetoaia\LaravelRepositories\Commands\MakeRepositoryCommand;
+use IulianGusetoaia\LaravelRepositories\Commands\MakeRepositoryCommand;
 
 class RepositoryServiceProvider extends ServiceProvider
 {

@@ -9,7 +9,7 @@
 Just install it through Composer:
 
 ```
-composer require gusetoaia/laravel-repositories
+composer require iuliangusetoaia/laravel-repositories
 ```
 
 After installation you can start using the repository pattern with Laravel.
@@ -44,7 +44,7 @@ php artisan make:repository ProductRepository --model=App\Models\Product
 
 namespace App\Repositories;
 
-use Gusetoaia\Repository;
+use IulianGusetoaia\Repository;
 use App\Models\Product; 
 
 class ProductRepository
@@ -80,7 +80,7 @@ This way you can always replace models for Mock objects when making unit tests.
 
 namespace App\Repositories;
 
-use Gusetoaia\Repository;
+use IulianGusetoaia\Repository;
 use App\Models\Product; 
 
 class ProductRepository

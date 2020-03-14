@@ -2,7 +2,7 @@
 
 namespace App\Repositories;
 
-use Gusetoaia\LaravelRepositories\Repository;
+use IulianGusetoaia\LaravelRepositories\Repository;
 use [model_namespace]; [comment_namespace_when_no_model]
 
 class DummyClass
