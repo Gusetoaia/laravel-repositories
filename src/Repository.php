@@ -7,11 +7,11 @@ trait Repository
     /**
      * When the called method doesn't exists on the Repository, Call it on the model
      *
-     * @param $method
-     * @param $parameters
+     * @param string $method
+     * @param array $parameters
      * @return mixed
      */
-    public function __call($method, $parameters)
+    public function __call(string $method, array $parameters)
     {
         return $this->model->$method(...$parameters);
     }
